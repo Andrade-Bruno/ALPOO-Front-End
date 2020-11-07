@@ -29,7 +29,7 @@ class DeleteUser extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
  
-        fetch(`http://localhost:3003/main/users/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/main/users/${id}`)
         .then(data => {
                 data.json().then(data => {
                     if (data.error) {

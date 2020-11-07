@@ -127,7 +127,7 @@ class CreateUser extends Component {
     };
  
     handleSubmit = event => {
-        fetch(" ${process.env.REACT_APP_API_URL}/main/users", {
+        fetch(`${process.env.REACT_APP_API_URL}/main/users`, {
             method: "post",
             body: JSON.stringify(this.state.user),
             headers: {

@@ -123,7 +123,7 @@ class UpdateUser extends Component {
     handleSubmit = event => {
         const { id } = this.state.user;
  
-        fetch(`http://localhost:3003/main/users/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/main/users/${id}`, {
             method: "put",
             body: JSON.stringify(this.state.user),
             headers: {
